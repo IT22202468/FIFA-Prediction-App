@@ -1,7 +1,14 @@
+# macOS
 .DS_Store
 
-.pyc
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
 
-.md
-
+# Environment variables
 .env
+
+# Markdown files
+*.md
