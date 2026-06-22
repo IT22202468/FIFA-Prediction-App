@@ -471,10 +471,6 @@ def run(
     df = pd.read_csv(src)
     print(f"Loaded {len(df):,} rows from {src.name}")
 
-    # Derive output suffix from filename: results_weighted_2016.csv → '_2016'
-    stem = src.stem  # e.g. 'results_weighted_2016'
-    suffix = stem.replace("results_weighted", "")  # e.g. '_2016' or ''
-
     result = fit(
         df,
         min_weight=min_weight,
@@ -487,7 +483,7 @@ def run(
     print("\n=== Fitted parameters ===")
     print_diagnostics(result)
 
-    save_params(result, suffix=suffix)
+    save_params(result, suffix="")
 
     print("\n=== Phase 2 complete ===")
     return result

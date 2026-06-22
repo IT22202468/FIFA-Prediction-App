@@ -38,7 +38,7 @@ from scipy.stats import poisson
 
 ROOT     = pathlib.Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-DEFAULT_PARAMS = DATA_DIR / "dc_params_2016.json"
+DEFAULT_PARAMS = DATA_DIR / "dc_params.json"
 MAX_GOALS = 10   # max goals per team in PMF grid; tails beyond this are negligible
 
 

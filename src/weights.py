@@ -443,12 +443,7 @@ def run(half_life_days: float = 912.5, start_date: str | None = None):
     df = build_weights(df, half_life_days=half_life_days)
     print_diagnostics(df)
 
-    # Choose output filename: suffix with start year when filtered
-    if start_date:
-        suffix = f"_{start_date[:4]}"
-    else:
-        suffix = ""
-    out = DATA_DIR / f"results_weighted{suffix}.csv"
+    out = DATA_DIR / "results_weighted.csv"
     df.to_csv(out, index=False)
     print(f"\n✓ Saved: {out.name} ({len(df):,} rows)")
     print("\n=== Phase 1 complete ===")
